@@ -2,11 +2,10 @@ let input = document.getElementById("input");
 
 function operators (secondValue){
     let firstValue = input.innerHTML;
-
-    if (firstValue.startsWith("0")){
+    if(firstValue.startsWith("0")){
         input.innerHTML = secondValue;
     }else{
-        input.innerHTML = firstValue + secondValue;
+        input.innerHTML = firstValue + secondValue
     }
 }
 
@@ -19,16 +18,15 @@ function allClear (){
     input.innerHTML = "0"
 };
 
-function clearing (){
+function clearing(){
     let deleteValue = input.innerHTML;
-    input.innerHTML = deleteValue.slice(0,-1);
-    input.innerHTML = "0"
-};
 
-
-
-
-
+    if (deleteValue.length >1){
+        input.innerHTML = deleteValue.slice(0, -1)
+    }else{
+        input.innerHTML = "0"
+    }
+}
 
 
 
